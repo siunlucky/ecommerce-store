@@ -46,7 +46,7 @@ const Summary = () => {
                     <div className="text-base font-medium text-gray-900">
                         Order total
                     </div>
-                    <Currency value={45} />
+                    <Currency value={totalPrice} />
                 </div>
             </div>
             <Button disabled={items.length === 0} onClick={onCheckout} className="w-full mt-6">
