@@ -3,12 +3,13 @@ import getProducts from "@/actions/get-products";
 import Container from "@/components/ui/container";
 import Billboard from "@/components/ui/billboard";
 import ProductList from "@/components/product-list";
+import getRandomBillboard from "@/actions/get-random-billboard";
 
 export const revalidate = 0;
 
 const HomePage = async () => {
     const products = await getProducts({ isFeatured: true });
-    const billboard = await getBillboard("d991dabd-3752-46de-96c5-2cf414c32ded");
+    const billboard = await getRandomBillboard();
 
     return (
         <Container>
